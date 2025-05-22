@@ -1,0 +1,19 @@
+<body>
+
+  <section class="home">
+    <div class="overlay">
+      <div class="hero">
+        <h1>Hi, I'm Niraj Bothe 👋</h1>
+        <p class="subtitle">Software Engineer | Building scalable systems and solving real-world problems.</p>
+        <a routerLink="/about" class="btn-primary">Know More About Me</a>
+      </div>
+
+      <div class="highlights">
+        <h2>What I Do</h2>
+        <ul class="skills-list">
+          <li *ngFor="let skill of skills">{{ skill }}</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</body>
