@@ -1,20 +1,22 @@
 <section class="about-container">
-  <img src="assets/profile.jpg" alt="Profile" class="profile-img" />
-
+  <div class="about-profile">
+    <img src="assets/profile.jpg" alt="Profile" class="profile-img" />
+  </div>
 
   <div class="about-content">
-    <h2>About Me</h2>
-    <p>
-      Hi, I'm Niraj – a software engineer with a passion for clean code, solving real-world problems, and building scalable systems. When I'm not coding, you’ll find me on spontaneous road trips or enjoying a good movie night.
+    <h2>👋 Hi, I'm Niraj</h2>
+    <p class="intro">
+      I'm a software engineer who loves clean code, building scalable systems, and solving real-world problems.
+    </p>
+
+    <p class="vibes">
+      When I'm not coding, I'm probably on a road trip, watching movies, or playing cricket. I believe in balancing hustle with fun.
     </p>
 
     <div class="about-details">
-      <h3>Things I Enjoy:</h3>
+      <h3>Things I Enjoy</h3>
       <ul>
-        <li>🚗 Driving with music</li>
-        <li>🎬 Movie nights with friends</li>
-        <li>📍 Exploring new places</li>
-        <li>🏏 Playing cricket</li>
+        <li *ngFor="let hobbie of hobbies">{{hobbie}}</li>       
       </ul>
     </div>
   </div>

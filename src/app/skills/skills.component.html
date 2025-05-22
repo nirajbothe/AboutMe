@@ -1,11 +1,18 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
-</html>
+<section class="skill-container">
+  <h2>Skills</h2>
+
+  <div class="skill-category">
+    <p>Frontend</p>
+    <ul class="skill-list" *ngFor="let skill of skills">
+      <li *ngIf="skill.Type === 'FrontEnd'">
+        ✔️ {{ skill.name }}
+      </li>
+    </ul>
+    <p>Backend</p>
+    <ul class="skill-list" *ngFor="let skill of skills">
+      <li *ngIf="skill.Type === 'Backend'">
+        ✔️ {{ skill.name }}
+      </li>
+    </ul>
+  </div>
+</section>
