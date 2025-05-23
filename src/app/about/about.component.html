@@ -10,14 +10,35 @@
     </p>
 
     <p class="vibes">
-      When I'm not coding, I'm probably on a road trip, watching movies, or playing cricket. I believe in balancing hustle with fun.
+      When I'm not coding, I'm probably on a road trip, watching movies, or playing cricket. I believe in balancing
+      hustle with fun.
     </p>
 
     <div class="about-details">
       <h3>Things I Enjoy</h3>
       <ul>
-        <li *ngFor="let hobbie of hobbies">{{hobbie}}</li>       
+        <li *ngFor="let hobbie of hobbies">{{hobbie}}</li>
       </ul>
     </div>
+
+    <div class="thought-box">
+      <h3>💬 Share your thoughts</h3>
+
+      <input type="text" [(ngModel)]="userThought" placeholder="Type your thoughts here..." />
+
+    
+  <button (click)="submitfunction()"   [disabled]="!userThought.trim()">
+    {{ submitted ? 'Submitted' : 'Submit' }}
+  </button>
+
+
+      <div *ngIf="userThought.trim()">
+        <h3>Your Thoughts Are:</h3>
+        <p>{{ userThought }}</p>
+      </div>
+
+      <h4 *ngIf="submitted">Thanks for the input! It's really appreciated. 😊</h4>
+    </div>
+
   </div>
 </section>
